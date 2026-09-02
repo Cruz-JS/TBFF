@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://d2tqlew3hnbhu"]
 
-[ext_resource type="Texture2D" uid="uid://b6fvivkujetum" path="res://Assets/TBFFMAINMENU.png" id="1_6khh7"]
+[ext_resource type="Texture2D" uid="uid://ldyrqjhn6fkv" path="res://Assets/TBFF Main Menu BG2(3).png" id="1_w1iyi"]
 [ext_resource type="Texture2D" uid="uid://bo30ttwv8w24t" path="res://Assets/TitleButton.png" id="2_bwrlp"]
+[ext_resource type="Script" uid="uid://dpbllsf12ij1i" path="res://Scenes/ParralaxBG.gd" id="2_epiv6"]
 [ext_resource type="Texture2D" uid="uid://pof2ui5lcxuc" path="res://Assets/ButtonPressed.png" id="3_71b5n"]
 [ext_resource type="FontFile" uid="uid://bd16nlb8pajan" path="res://Assets/Fonts/VCR_OSD_MONO_1.001.ttf" id="3_84h87"]
 [ext_resource type="Texture2D" uid="uid://b453u61a7hygi" path="res://Assets/Logo.png" id="4_bwrlp"]
@@ -10,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bk7ruglb8817m" path="res://Scenes/label.gd" id="5_t32dt"]
 [ext_resource type="Shader" uid="uid://chhkliinpp284" path="res://Assets/new_shader_material.gdshader" id="6_71b5n"]
 [ext_resource type="Script" uid="uid://csjwoxatmyrb" path="res://Scripts/GameVersion.gd" id="10_me1mv"]
+[ext_resource type="Texture2D" uid="uid://co208nkxvrwf5" path="res://Assets/settingsButton.png" id="11_me1mv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_epiv6"]
 font = ExtResource("3_84h87")
@@ -24,7 +26,9 @@ shader_parameter/target_blend_color = Color(1, 0.52156866, 0.9372549, 0.12941177
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=848689344]
 modulate = Color(1, 1, 1, 0.4745098)
 position = Vector2(960, 540)
-texture = ExtResource("1_6khh7")
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_w1iyi")
+script = ExtResource("2_epiv6")
 metadata/_edit_lock_ = true
 
 [node name="NewGame" type="TextureButton" parent="." unique_id=1329847118]
@@ -130,3 +134,14 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 0.52156866, 0.9372549, 1)
 metadata/_edit_lock_ = true
+
+[node name="NewGame2" type="TextureButton" parent="." unique_id=1691191568]
+texture_filter = 1
+offset_left = 1812.0
+offset_top = 13.0
+offset_right = 1905.0
+offset_bottom = 115.0
+action_mode = 0
+texture_normal = ExtResource("11_me1mv")
+texture_pressed = ExtResource("11_me1mv")
+script = ExtResource("4_w1iyi")
