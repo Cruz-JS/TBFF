@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://d2tqlew3hnbhu"]
+
+[ext_resource type="Texture2D" uid="uid://b6fvivkujetum" path="res://Assets/TBFFMAINMENU.png" id="1_6khh7"]
+[ext_resource type="Texture2D" uid="uid://bo30ttwv8w24t" path="res://Assets/TitleButton.png" id="2_bwrlp"]
+[ext_resource type="Texture2D" uid="uid://pof2ui5lcxuc" path="res://Assets/ButtonPressed.png" id="3_71b5n"]
+[ext_resource type="FontFile" uid="uid://bd16nlb8pajan" path="res://Assets/Fonts/VCR_OSD_MONO_1.001.ttf" id="3_84h87"]
+[ext_resource type="Texture2D" uid="uid://b453u61a7hygi" path="res://Assets/Logo.png" id="4_bwrlp"]
+[ext_resource type="Script" uid="uid://me4d3k3tc8y4" path="res://Scenes/texture_button.gd" id="4_w1iyi"]
+[ext_resource type="LabelSettings" uid="uid://cpaorfkrm502d" path="res://Assets/Fonts/new_label_settings.tres" id="5_7t0me"]
+[ext_resource type="Script" uid="uid://bk7ruglb8817m" path="res://Scenes/label.gd" id="5_t32dt"]
+[ext_resource type="Shader" uid="uid://chhkliinpp284" path="res://Assets/new_shader_material.gdshader" id="6_71b5n"]
+[ext_resource type="Script" uid="uid://csjwoxatmyrb" path="res://Scripts/GameVersion.gd" id="10_me1mv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_epiv6"]
+font = ExtResource("3_84h87")
+font_size = 30
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_71b5n"]
+shader = ExtResource("6_71b5n")
+shader_parameter/target_blend_color = Color(1, 0.52156866, 0.9372549, 0.12941177)
+
+[node name="Title" type="Node2D" unique_id=1266586149]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=848689344]
+modulate = Color(1, 1, 1, 0.4745098)
+position = Vector2(960, 540)
+texture = ExtResource("1_6khh7")
+metadata/_edit_lock_ = true
+
+[node name="NewGame" type="TextureButton" parent="." unique_id=1329847118]
+texture_filter = 1
+offset_left = 282.0
+offset_top = 419.0
+offset_right = 746.0
+offset_bottom = 563.0
+action_mode = 0
+texture_normal = ExtResource("2_bwrlp")
+texture_pressed = ExtResource("3_71b5n")
+script = ExtResource("4_w1iyi")
+
+[node name="Label" type="Label" parent="NewGame" unique_id=1999212291]
+layout_mode = 0
+offset_right = 464.0
+offset_bottom = 144.0
+text = "New Game"
+label_settings = ExtResource("5_7t0me")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_t32dt")
+
+[node name="Multiplayer" type="TextureButton" parent="." unique_id=379641511]
+texture_filter = 1
+offset_left = 283.0
+offset_top = 607.0
+offset_right = 747.0
+offset_bottom = 751.0
+action_mode = 0
+texture_normal = ExtResource("2_bwrlp")
+texture_pressed = ExtResource("3_71b5n")
+script = ExtResource("4_w1iyi")
+
+[node name="Label" type="Label" parent="Multiplayer" unique_id=1309268791]
+layout_mode = 0
+offset_right = 464.0
+offset_bottom = 144.0
+text = "Multiplayer"
+label_settings = ExtResource("5_7t0me")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_t32dt")
+
+[node name="TBFF Wiki" type="TextureButton" parent="." unique_id=377997332]
+texture_filter = 1
+offset_left = 283.0
+offset_top = 797.0
+offset_right = 747.0
+offset_bottom = 941.0
+action_mode = 0
+texture_normal = ExtResource("2_bwrlp")
+texture_pressed = ExtResource("3_71b5n")
+script = ExtResource("4_w1iyi")
+
+[node name="Label" type="Label" parent="TBFF Wiki" unique_id=1819884967]
+layout_mode = 0
+offset_right = 464.0
+offset_bottom = 144.0
+text = "TBFF Wiki"
+label_settings = ExtResource("5_7t0me")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_t32dt")
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1812192967]
+position = Vector2(515, 169.99998)
+scale = Vector2(0.4944444, 0.4944445)
+texture = ExtResource("4_bwrlp")
+
+[node name="Label" type="Label" parent="." unique_id=514106919]
+offset_left = 1616.0
+offset_top = 1035.0
+offset_right = 1911.0
+offset_bottom = 1062.0
+text = "Team Fallon 2026"
+label_settings = SubResource("LabelSettings_epiv6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameVersion" type="Label" parent="." unique_id=1393968018]
+offset_left = 1616.0
+offset_top = 1003.0
+offset_right = 1911.0
+offset_bottom = 1030.0
+text = "Version "
+label_settings = SubResource("LabelSettings_epiv6")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("10_me1mv")
+
+[node name="Tint" type="ColorRect" parent="." unique_id=1698212294]
+material = SubResource("ShaderMaterial_71b5n")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.52156866, 0.9372549, 1)
+metadata/_edit_lock_ = true
