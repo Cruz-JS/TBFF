@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://u1gxagtv4u3n"]
+
+[ext_resource type="Texture2D" uid="uid://clf2b66aokmbk" path="res://Assets/BG/BG1.png" id="1_gl6un"]
+[ext_resource type="Texture2D" uid="uid://dpyfsxdn3d8uu" path="res://Assets/BG/BG BG.png" id="1_kldst"]
+[ext_resource type="Texture2D" uid="uid://babplmj85esls" path="res://Assets/BG/BG2.png" id="2_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://bi5k0j4v8jpvj" path="res://Scenes/Player.tscn" id="2_j5yw3"]
+[ext_resource type="Texture2D" uid="uid://l1r0uhnmes4a" path="res://Assets/BG/BG GROUND.png" id="2_kldst"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfh47"]
+size = Vector2(36.744896, 20)
+
+[node name="Game" type="Node2D" unique_id=855061322]
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1593202755]
+repeat_size = Vector2(1, 0)
+autoscroll = Vector2(1, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=199527184]
+position = Vector2(960, 540)
+texture = ExtResource("1_kldst")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=345889824]
+scroll_scale = Vector2(0.85, 0.85)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=1546612996]
+texture = ExtResource("2_b2bpf")
+offset = Vector2(960, 540)
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1978324838]
+scroll_scale = Vector2(0.9, 0.9)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=867369541]
+texture = ExtResource("1_gl6un")
+offset = Vector2(960, 540)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2106265662]
+position = Vector2(960, 540)
+texture = ExtResource("2_kldst")
+
+[node name="Player" parent="." unique_id=577028064 instance=ExtResource("2_j5yw3")]
+position = Vector2(847.9999, 671.9999)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=111416067]
+scale = Vector2(0.19999999, 0.19999999)
+offset = Vector2(100, 0)
+limit_left = -320
+limit_right = 2100
+limit_bottom = 1170
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_left_margin = 0.4
+drag_top_margin = 0.4
+drag_right_margin = 0.4
+drag_bottom_margin = 0.4
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1051085696]
+position = Vector2(123, 962.0001)
+scale = Vector2(98, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=841668238]
+position = Vector2(8.372447, 0)
+scale = Vector2(1, 0.99999994)
+shape = SubResource("RectangleShape2D_nfh47")

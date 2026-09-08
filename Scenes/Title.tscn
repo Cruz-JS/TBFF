@@ -12,6 +12,7 @@
 [ext_resource type="Shader" uid="uid://chhkliinpp284" path="res://Assets/new_shader_material.gdshader" id="6_71b5n"]
 [ext_resource type="Script" uid="uid://csjwoxatmyrb" path="res://Scripts/GameVersion.gd" id="10_me1mv"]
 [ext_resource type="Texture2D" uid="uid://co208nkxvrwf5" path="res://Assets/settingsButton.png" id="11_me1mv"]
+[ext_resource type="Texture2D" uid="uid://b7plsv0hysn4r" path="res://Assets/settingsPressed.png" id="13_3do78"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_epiv6"]
 font = ExtResource("3_84h87")
@@ -114,7 +115,7 @@ offset_left = 1616.0
 offset_top = 1003.0
 offset_right = 1911.0
 offset_bottom = 1030.0
-text = "Version "
+text = "Version Number"
 label_settings = SubResource("LabelSettings_epiv6")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -135,7 +136,7 @@ mouse_filter = 2
 color = Color(1, 0.52156866, 0.9372549, 1)
 metadata/_edit_lock_ = true
 
-[node name="NewGame2" type="TextureButton" parent="." unique_id=1691191568]
+[node name="Settings" type="TextureButton" parent="." unique_id=1691191568]
 texture_filter = 1
 offset_left = 1812.0
 offset_top = 13.0
@@ -143,5 +144,5 @@ offset_right = 1905.0
 offset_bottom = 115.0
 action_mode = 0
 texture_normal = ExtResource("11_me1mv")
-texture_pressed = ExtResource("11_me1mv")
+texture_pressed = ExtResource("13_3do78")
 script = ExtResource("4_w1iyi")
